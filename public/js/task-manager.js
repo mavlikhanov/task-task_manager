@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         const taskElement = document.getElementById('task-' + taskId);
                         taskElement.classList.toggle('text-bg-secondary');
                         taskElement.classList.toggle('text-bg-success');
+                        const statusLabel = taskElement.querySelector('.js-status')
+                        statusLabel.textContent = checkbox.checked
+                            ? 'Status: Done'
+                            : 'Status: Ready to work';
                     }
                 }
             });

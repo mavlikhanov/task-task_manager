@@ -78,6 +78,7 @@
                         </div>
                     <?php endif; ?>
                     <div class="card-body">
+                        <h5 class="card-title js-status">Status: <?php echo $task->isDone() ? 'Done' : 'Ready to work' ?></h5>
                         <h5 class="card-title">Name: <?php echo $task->getName() ?></h5>
                         <h5 class="card-title">Email: <?php echo $task->getEmail() ?></h5>
                         <p class="fw-bold">Task text:</p>
